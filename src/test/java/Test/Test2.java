@@ -68,9 +68,6 @@ public class Test2 extends Pattern {
 
         while(it_price.hasNext()){
             sqlMethods.writeIntoGoodsTable(it_title.next().toString(), Integer.parseInt(it_price.next().toString()));
-            System.out.println(it_title.next().toString());
-            System.out.println(Integer.parseInt(it_price.next().toString()));
-
         }
     }
 
