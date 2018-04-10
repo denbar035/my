@@ -8,7 +8,7 @@ import org.openqa.selenium.support.FindBy;
 import java.util.concurrent.TimeUnit;
 
 /**
- * Created by denys on 4/9/18.
+ * Created by denys on 4/10/18.
  */
 public class HouseholdChemicalsPF extends PageObject {
     public HouseholdChemicalsPF(WebDriver driver){

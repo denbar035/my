@@ -10,7 +10,7 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 import java.util.List;
 
 /**
- * Created by denys on 4/9/18.
+ * Created by denys on 4/10/18.
  */
 public class Methods {
     ItemsPagePF itemsPagePF;
@@ -20,14 +20,13 @@ public class Methods {
         List<WebElement> goodsList = itemsPagePF.goods_view_list;
         int goodsListSize = goodsList.size();
 
-        //Easter animation
-        /**
+        //Right bottom popup
         try{
             WebElement el = driver.findElement(By.xpath("//span[@class='exponea-close']"));
             if(el.isDisplayed())
                 el.click();
         } catch(Exception e){}
-        */
+
 
         itemsPagePF.load_more_button_click();
         WebDriverWait waitmy = new WebDriverWait(driver, 20);

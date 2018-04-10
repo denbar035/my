@@ -6,7 +6,7 @@ import org.openqa.selenium.support.PageFactory;
 import java.util.concurrent.TimeUnit;
 
 /**
- * Created by denys on 4/7/18.
+ * Created by denys on 4/10/18.
  */
 public class PageObject {
 

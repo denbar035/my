@@ -9,7 +9,7 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 import java.util.List;
 
 /**
- * Created by denys on 4/7/18.
+ * Created by denys on 4/10/18.
  */
 public class WaitLib {
 

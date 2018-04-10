@@ -7,7 +7,7 @@ import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
 
 /**
- * Created by denys on 4/7/18.
+ * Created by denys on 4/10/18.
  */
 public abstract class Pattern {
 
@@ -23,7 +23,7 @@ public abstract class Pattern {
     }
     @AfterMethod
     public void closing(){
-        //driver.close();
+        driver.close();
     }
 
 }

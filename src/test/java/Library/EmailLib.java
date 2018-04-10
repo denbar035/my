@@ -12,7 +12,7 @@ import java.util.Properties;
 import javax.mail.Session;
 
 /**
- * Created by denys on 4/7/18.
+ * Created by denys on 4/10/18.
  */
 public class EmailLib {
 

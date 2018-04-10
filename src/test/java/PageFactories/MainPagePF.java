@@ -1,5 +1,7 @@
 package PageFactories;
 
+import PageFactories.CategoriesPages.SmartphoneTVElectronicsPF;
+import PageFactories.CategoriesPages.TelephonesPF;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
@@ -8,7 +10,7 @@ import org.openqa.selenium.support.PageFactory;
 import java.util.concurrent.TimeUnit;
 
 /**
- * Created by denys on 4/7/18.
+ * Created by denys on 4/10/18.
  */
 public class MainPagePF extends PageObject {
 
@@ -34,5 +36,14 @@ public class MainPagePF extends PageObject {
         household_products_button.click();
     }
 
+    public void navigateToSmartphones(){
+        smartphones_tv_electronics_button_click();
 
+
+        SmartphoneTVElectronicsPF smartphoneTVElectronicsPF = new SmartphoneTVElectronicsPF(driver);
+        smartphoneTVElectronicsPF.telephones_button_click();
+
+        TelephonesPF telephones = new TelephonesPF(driver);
+        telephones.smartphones_button_click();
+    }
 }

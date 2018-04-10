@@ -11,7 +11,7 @@ import java.util.List;
 import java.util.concurrent.TimeUnit;
 
 /**
- * Created by denys on 4/7/18.
+ * Created by denys on 4/10/18.
  */
 public class ItemsPagePF extends PageObject {
 
@@ -39,4 +39,9 @@ public class ItemsPagePF extends PageObject {
 
     @FindBy(xpath = ".//div[@class='g-price-uah']")
     public List<WebElement> goods_price_list;
+
+    @FindBy(xpath = ".//i[@class='g-tag g-tag-icon-middle-popularity sprite']//ancestor::div[@class='g-i-tile g-i-tile-catalog']//div[@class='g-price-uah']")
+    public List<WebElement> top_goods_price_list;
+    @FindBy(xpath = ".//i[@class='g-tag g-tag-icon-middle-popularity sprite']//ancestor::div[@class='g-i-tile g-i-tile-catalog']//div[@class='g-i-tile-i-title clearfix']/a[1]")
+    public List<WebElement> top_goods_title_list;
 }

@@ -1,16 +1,18 @@
 package Library;
 
+import org.apache.poi.ss.usermodel.Cell;
+import org.apache.poi.ss.usermodel.Row;
+import org.apache.poi.ss.usermodel.Sheet;
+import org.apache.poi.ss.usermodel.Workbook;
+import org.apache.poi.xssf.usermodel.XSSFWorkbook;
 import org.openqa.selenium.WebElement;
 
-import java.io.BufferedWriter;
-import java.io.File;
-import java.io.FileNotFoundException;
-import java.io.FileWriter;
+import java.io.*;
 import java.util.List;
 import java.util.Scanner;
 
 /**
- * Created by denys on 4/7/18.
+ * Created by denys on 4/10/18.
  */
 public class FileLib {
 
@@ -49,5 +51,57 @@ public class FileLib {
             System.out.println("EmailReader Error");
         }
         return null;
+    }
+
+    public void writeExcelexisted(String[] title, int[] price, String sheet){
+        File src = new File ("ExcelFiles/ExcelDoc.xls");
+        Workbook wb = null;
+        try {
+            FileInputStream stream = new FileInputStream(src);
+            wb = new XSSFWorkbook(stream);
+        }
+        catch(Exception e){}
+        //add a new sheet to the workbook
+        Sheet sheet1 = wb.createSheet(sheet);
+        Row row;
+        Cell rowcol1;
+        Cell rowcol2;
+        for(int i=title.length-1, row_num = 0; i>=0; i--, row_num++){
+            row = sheet1.createRow(row_num);
+            rowcol1 = row.createCell(0);
+            rowcol2 = row.createCell(1);
+            rowcol1.setCellValue(title[i]);
+            rowcol2.setCellValue(price[i]);
+        }
+        try {
+            FileOutputStream fileOut = new FileOutputStream("ExcelFiles/ExcelDoc.xls");
+            wb.write(fileOut);
+            fileOut.close();
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+    }
+    public void writeExcelcreate(String[] title, int[] price, String sheet) {
+        //create a new workbook
+        Workbook wb = new XSSFWorkbook();
+        //add a new sheet to the workbook
+        Sheet sheet1 = wb.createSheet(sheet);
+        Row row;
+        Cell rowcol1;
+        Cell rowcol2;
+        for(int i=title.length-1, row_num = 0; i>=0; i--, row_num++){
+            row = sheet1.createRow(row_num);
+            rowcol1 = row.createCell(0);
+            rowcol2 = row.createCell(1);
+            rowcol1.setCellValue(title[i]);
+            rowcol2.setCellValue(price[i]);
+        }
+        try {
+            FileOutputStream fileOut = new FileOutputStream("ExcelFiles/ExcelDoc.xls");
+            wb.write(fileOut);
+            fileOut.close();
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
     }
 }
