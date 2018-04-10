@@ -1,0 +1,8 @@
+-------------------------------------------------------------------------------
+Test set: TestSuite
+-------------------------------------------------------------------------------
+Tests run: 3, Failures: 1, Errors: 0, Skipped: 0, Time elapsed: 440.356 sec <<< FAILURE! - in TestSuite
+SecondTask(Test.Test2)  Time elapsed: 195.986 sec  <<< FAILURE!
+java.lang.StringIndexOutOfBoundsException: begin 0, end -4, length 0
+	at Test.Test2.SecondTask(Test2.java:57)
+

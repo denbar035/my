@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Failed suite [suite]" verbose="0">
+  <test name="Test(failed)">
+    <classes>
+      <class name="Test.Test1">
+        <methods>
+          <include name="launching"/>
+          <include name="closing"/>
+        </methods>
+      </class> <!-- Test.Test1 -->
+      <class name="Test.Test2">
+        <methods>
+          <include name="launching"/>
+          <include name="closing"/>
+          <include name="SecondTask"/>
+        </methods>
+      </class> <!-- Test.Test2 -->
+      <class name="Test.Test3">
+        <methods>
+          <include name="launching"/>
+          <include name="closing"/>
+        </methods>
+      </class> <!-- Test.Test3 -->
+    </classes>
+  </test> <!-- Test(failed) -->
+</suite> <!-- Failed suite [suite] -->
